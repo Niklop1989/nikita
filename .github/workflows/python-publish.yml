@@ -1,0 +1,9 @@
+name: Demo Workflow
+on: discussion
+jobs:
+  my_project:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run my project  
+        run: echo Hello run my project
+    
