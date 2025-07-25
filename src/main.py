@@ -8,7 +8,7 @@ from nikita.src.schemas import ReceiptBase, ReceiptPostAdd
 from nikita.src.database import engine, session
 
 app = FastAPI()
-#hello nikita
+#hello 
 @app.get("/")
 async def hello_world():
     return {"message":"hello world"}
