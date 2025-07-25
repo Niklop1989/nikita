@@ -1,0 +1,14 @@
+name: Test program
+on: push
+jobs:
+  test_my_program:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code repository
+        #run: echo run
+        uses: actions/python-action
+      - name: Install dependencies
+#        run: npm ci
+        run: npm install
+      - name: Test application
+        run: npm run test
