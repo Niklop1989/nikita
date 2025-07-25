@@ -1,6 +1,5 @@
 name: Demo Workflow
-on: discussion
-workflow_dispatch:
+on: workflow_dispatch
 jobs:
   print:
     runs-on: ubuntu-latest
