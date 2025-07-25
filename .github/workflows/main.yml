@@ -6,6 +6,10 @@ jobs:
     steps: 
       - name: Run my project  
         run: echo Hello run my project
+      - name: Print a few lines
+        run: |
+          echo First line
+          echo second line
 
 
     
