@@ -7,6 +7,6 @@ jobs:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-        run: npm ci
-      - name: Lint
-        run: npm run lint
+        run: tests/requirements.txt
+      - name: Run test
+        run: tests/pytest
