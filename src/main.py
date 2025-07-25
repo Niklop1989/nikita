@@ -1,6 +1,6 @@
 from typing import List
 from fastapi import FastAPI, HTTPException
-
+import uvicorn
 from sqlalchemy.future import select
 
 from nikita.src.models import Base, Recipes
@@ -65,3 +65,6 @@ async def get_recipe():
     res = await session.execute(select(Recipes).order_by(Recipes.views.desc(),
                                                          Recipes.time_to_cook.desc()))
     return res.scalars().all()
+
+if __name__=='__main__':
+    uvicorn.run("main:app",host="0.0.0.0",port=8000)

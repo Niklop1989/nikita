@@ -1,14 +1,14 @@
 name: Test program
-on: push
+on: workflow_dispatch
 jobs:
   test_my_program:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code repository
-        #run: echo run
-        uses: actions/python-action
-      - name: Install dependencies
-#        run: npm ci
-        run: tests/pytest
-      - name: Test application
-        run: test/pytest
+      - uses: actions/checkout@v4
+      - name: Settings python
+      - uses: action/setup-python@v5
+        with: python-version:'3.13'
+      - name: Установка зависимостей
+        run: pip install -r requirements.txt
+      - name: запуск pytest
+        run: pytest/tests

@@ -7,3 +7,4 @@ mypy
 pytest
 sqlalchemy
 fastapi
+uvicorn
