@@ -9,6 +9,6 @@ jobs:
         uses: actions/python-action
       - name: Install dependencies
 #        run: npm ci
-        run: npm install
+        run: tests/pytest
       - name: Test application
-        run: npm run test
+        run: test/pytest
