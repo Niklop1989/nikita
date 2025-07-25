@@ -6,4 +6,6 @@ jobs:
     steps: 
       - name: Run my project  
         run: echo Hello run my project
+  workflow_dispatch:
+
     
