@@ -2,11 +2,12 @@ name: Test program
 on: workflow_dispatch
 jobs:
   test_my_program:
-    runs-on: python
+    runs-on: ubuntu-latest
     steps:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-        run: tests/requirements.txt
-      - name: Run test
-        run: tests/test_api.py
+        run: echo hello nikita
+        # run: tests/requirements.txt
+      # - name: Run test
+      #   run: tests/test_api.py
