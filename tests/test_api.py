@@ -14,18 +14,18 @@ def test_root():
 
 
 def test_get_recipes():
-    response = test_client.get(f"/recipes")
+    response = test_client.get("/recipes")
     assert response.status_code == 200
     resp = response.json()
 
-def test_get_recipes_by_id(recipes_id):
+def test_get_recipes_by_id(recipes_id=1):
     response = test_client.get(f"/recipes/{recipes_id}")
     assert response.status_code == 200
     resp = response.json()
 
 
 def test_create_recipes():
-    response = test_client.post(f"/recipes")
+    response = test_client.post("/recipes")
     assert response.status_code == 422
     # assert response.json() == {"ok":True}
 

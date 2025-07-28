@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class ReceiptBase(BaseModel):
@@ -12,7 +12,4 @@ class ReceiptBase(BaseModel):
 
 
 class ReceiptPostAdd(ReceiptBase):
-
-    class Config:
-        orm_mode = True
-
+    model_config = ConfigDict(from_attributes=True)
