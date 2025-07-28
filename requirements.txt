@@ -1,6 +1,5 @@
 black
 aiosqlite
-sqlite3
 autoflake
 flake8
 flake8-bugbear
