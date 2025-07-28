@@ -9,4 +9,4 @@ jobs:
       - name: Install depend
         run: tests/requirements.txt
       - name: Run test
-        run: tests/pytest
+        run: tests/test_api.py
