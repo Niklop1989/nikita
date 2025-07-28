@@ -11,3 +11,4 @@ fastapi
 uvicorn
 pydentic
 factory-boy
+httpx
