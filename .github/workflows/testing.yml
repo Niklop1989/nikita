@@ -20,7 +20,7 @@ jobs:
         run: autoflake --in-place --remove-all-unused-imports --remove-unused-variables --recursive .
       - name: Run pytest
         run: | 
-              export PYTHONPATH:$(pwd)
+              export PYTHONPATH=PYTHONPATH:$(pwd)
               pytest tests/
         
         
