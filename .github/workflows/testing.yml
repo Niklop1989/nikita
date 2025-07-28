@@ -7,6 +7,8 @@ jobs:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-        run: tests/requirements.txt
-      - name: Run test
-        run: tests/pytest
+        uses: actions/setup-python@v2 
+      - name: Install dependencies
+        run:  pip install -r requirements.txt
+      - name: Run tests
+        run: tests/python test_api.py
