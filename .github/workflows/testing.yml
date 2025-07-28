@@ -7,7 +7,6 @@ jobs:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-        run: echo hello nikita
-        # run: tests/requirements.txt
+        run: tests/requirements.txt
       # - name: Run test
       #   run: tests/test_api.py
