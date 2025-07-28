@@ -2,7 +2,7 @@ name: Test program
 on: workflow_dispatch
 jobs:
   test_my_program:
-    runs-on: ubuntu-latest
+    runs-on: python
     steps:
       - name: Test my program
         uses: actions/checkout@v3
