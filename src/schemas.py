@@ -16,12 +16,3 @@ class ReceiptPostAdd(ReceiptBase):
     class Config:
         orm_mode = True
 
-
-class ReceiptDelete(ReceiptBase):
-
-    class CConfig:
-        orm_mode = True
-
-
-class ReceiptGet(ReceiptBase):
-    ...

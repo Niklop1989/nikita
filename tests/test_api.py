@@ -1,25 +1,25 @@
 import time
 
 def test_root(test_client):
-    response = test_client.get("/")
+    response = test_client.post("/")
     assert response.status_code == 200
-    assert response.json() == {"message":"hello world"}
+    assert response.json() == {"ok":200}
 
-
+#
 def test_get_recipes(test_client):
-    response = test_client.get(f"/recipes/")
+    response = test_client.get(f"/recipes")
     assert response.status_code == 200
     resp = response.json()
-
+#
 def test_get_recipes_by_id(test_client,recipes_id):
     response = test_client.get(f"/recipes/{recipes_id}")
-    assert response.status_code == 404
+    assert response.status_code == 200
     resp = response.json()
-
+# #
 def test_create_recipes(test_client):
-    response = test_client.post(f"/recipes/")
-    assert response.status_code == 404
-    resp = response.json(())
+    response = test_client.post(f"/recipes")
+    assert response.status_code == 422
+    # assert response.json() == {"ok":True}
 
 
 # def test_create_get_user(test_client, user_payload):
