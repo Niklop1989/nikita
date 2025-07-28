@@ -1,21 +1,25 @@
 import time
 
+import pytest
+
+
+@pytest.fixture
 def test_root(test_client):
     response = test_client.post("/")
     assert response.status_code == 200
     assert response.json() == {"ok":200}
 
-#
+@pytest.fixture
 def test_get_recipes(test_client):
     response = test_client.get(f"/recipes")
     assert response.status_code == 200
     resp = response.json()
-#
+@pytest.fixture
 def test_get_recipes_by_id(test_client,recipes_id):
     response = test_client.get(f"/recipes/{recipes_id}")
     assert response.status_code == 200
     resp = response.json()
-# #
+@pytest.fixture
 def test_create_recipes(test_client):
     response = test_client.post(f"/recipes")
     assert response.status_code == 422

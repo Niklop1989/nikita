@@ -8,3 +8,5 @@ pytest
 sqlalchemy
 fastapi
 uvicorn
+pydentic
+factory-boy
