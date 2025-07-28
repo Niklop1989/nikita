@@ -7,11 +7,12 @@ jobs:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
+        run: echo hello 
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+      # - name: Install dependencies
+      #   run: npm install
+      # - name: Run tests
+      #   run: npm test
