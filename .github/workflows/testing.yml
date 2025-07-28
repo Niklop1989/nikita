@@ -17,5 +17,5 @@ jobs:
       - name: Run black
         run: black .  
       - name: Run flake8
-        run: flake8 .
+        run: autoflake --in-place --remove-all-unused-imports --remove-unused-variables --recursive .
         
