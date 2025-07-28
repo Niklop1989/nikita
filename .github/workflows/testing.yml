@@ -7,12 +7,10 @@ jobs:
       - name: Test my program
         uses: actions/checkout@v3
       - name: Install depend
-        run: echo hello 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+        uses: actions/setup-python@v2 
       - name: Install dependencies
-        run: pip install -r requirements.txt 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt|
       - name: Run tests
         run: tests/test_api.py
